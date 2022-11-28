@@ -1,12 +1,61 @@
 {
+  "wireit": {
+    "start": {
+      "command": "ng serve demo",
+      "service": true,
+      "dependencies": [
+        {
+          "script": "build.libs",
+          "cascade": true
+        }
+      ],
+      "files": [
+        "projects/demo/**/*.*"
+      ]
+    },
+    "build.libs": {
+      "dependencies": [
+        "build.libA",
+        "build.libB"
+      ]
+    },
+    "build.libA": {
+      "command": "ng build --project libA",
+      "files": [
+        "projects/lib-a/**/*.*"
+      ],
+      "output": [
+        "dist/lib-a"
+      ]
+    },
+    "build.libB": {
+      "command": "ng build --project libB",
+      "files": [
+        "projects/lib-b/**/*.*"
+      ],
+      "output": [
+        "dist/lib-b"
+      ],
+      "dependencies": [
+        "build.libA"
+      ]
+    },
+    "build": {
+      "command": "ng build --project demo",
+      "dependencies": [
+        "build.libs"
+      ]
+    }
+  },
   "name": "wirei-problem-repo",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "start": "wireit",
+    "build.libs": "wireit",
+    "build.libA": "wireit",
+    "build.libB": "wireit",
+    "build": "wireit"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +72,7 @@
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^15.0.1",
     "@angular/cli": "~15.0.1",
     "@angular/compiler-cli": "^15.0.0",
     "@types/jasmine": "~4.3.0",
@@ -32,6 +82,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-packagr": "^15.0.0",
     "typescript": "~4.8.2"
   }
 }

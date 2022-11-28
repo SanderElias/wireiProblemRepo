@@ -1,0 +1,7 @@
+/*
+ * Public API Surface of lib-a
+ */
+export * from './lib/lib-a.service';
+export * from './lib/lib-a.component';
+export * from './lib/lib-a.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL2xpYi1hL3NyYy9wdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHO0FBRUgsY0FBYyxxQkFBcUIsQ0FBQztBQUNwQyxjQUFjLHVCQUF1QixDQUFDO0FBQ3RDLGNBQWMsb0JBQW9CLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogUHVibGljIEFQSSBTdXJmYWNlIG9mIGxpYi1hXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9saWIvbGliLWEuc2VydmljZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9saWItYS5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvbGliLWEubW9kdWxlJztcbiJdfQ==

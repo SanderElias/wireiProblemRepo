@@ -1,0 +1,1 @@
+{"fullyTracked":false,"platform":"linux","arch":"x64","nodeVersion":"v18.12.1","command":"ng build --project demo","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{"[\"/home/sander/Documents/temp/wireiProblemRepo\",\"build.libs\"]":"f87db6cd3cc7c5b2ec9d4f30250431e43588b450758ed6dda00ac14d2c4e9752"}}
